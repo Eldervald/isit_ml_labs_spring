@@ -1,0 +1,28 @@
+[project]
+name = "isit-ml-labs-spring"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "jupyterlab>=4.3.5",
+    "networkx>=3.4.2",
+    "numpy>=2.2.2",
+    "pycombo",
+    "pytest>=8.3.4",
+    "scipy>=1.15.1",
+    "seaborn>=0.13.2",
+    "torch>=2.6.0",
+    "tqdm>=4.67.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+pycombo = { git = "https://github.com/Casyfill/pyCombo" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
