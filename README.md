@@ -102,7 +102,7 @@ uv --version
    Можно тестировать отдельные файлы тестов или директории, например запустим тесты для самой первой задачи:
 
    ```bash
-   uv run pytest ./lab1/tasks/add_zeros
+   uv run pytest lab1-python-intro\1-hello_world
    ```
 
 ---
