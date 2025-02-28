@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "graphviz>=0.20.3",
     "ipykernel>=6.29.5",
     "ipywidgets>=8.1.5",
     "jupyterlab>=4.3.5",
@@ -23,9 +24,12 @@ dependencies = [
 [tool.uv.sources]
 torch = { index = "pytorch-cpu" }
 pycombo = { git = "https://github.com/Casyfill/pyCombo" }
-testlib = { path = "tools/testlib" }
+testlib = { path = "tools/testlib", editable = true }
 
 [[tool.uv.index]]
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
 explicit = true
+
+[tool.hatch.metadata]
+allow-direct-references = true
